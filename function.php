@@ -5,5 +5,5 @@ function somaNum($num1,$num2){
 }
 $a = 10;
 $b = 50;
-echo somaNum($b,$c)
- ?>
+echo somaNum($a,$b);
+?>

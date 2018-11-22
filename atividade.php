@@ -1,3 +1,4 @@
+
 <?php 
 /*Funçãocom três parametros,utilizando o switch para cada tipo.*/
 
