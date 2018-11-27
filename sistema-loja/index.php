@@ -16,7 +16,7 @@
 			<div class="card shadow p-3 mb-5 bg-white rounded">
 				<div class="card-body">
 					<div class="text-center">
-						<img src="img/login.png" width="130px" class="img-fluid">
+						<img src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/login.png" width="130px" class="img-fluid">
 					</div>
 					<h3 class="text-center">Área restrita</h3>
 

@@ -1,14 +1,14 @@
 <?php 
 	//$mysqli = new mysqli("localhost", "usuario", "senha", "database");
 	//nesta linha realizo a conexão
-	$conexao = new mysqli("localhost", "root", "senac", "loja");
+require "include/connection.php";
 	//nesta linha, monto a consulta a ser realizada
-	$sql_produtos = "SELECT p.*, c.descricao as categoria 
-					 FROM produto p
-					 LEFT JOIN  categoria c ON c.id = p.id_categoria
-					 ORDER BY p.id";
+$sql_produtos = "SELECT p.*, c.descricao as categoria 
+FROM produto p
+LEFT JOIN  categoria c ON c.id = p.id_categoria
+ORDER BY p.id";
 	//nesta linha, executo a consulta montada
-	$produtos = $conexao->query($sql_produtos);
+$produtos = $conexao->query($sql_produtos);
 ?>
 
 <?php include "layout/header.php"; ?>
@@ -19,17 +19,18 @@
 	<div class="row">
 		<div class="col">
 			<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb">
-			    <li class="breadcrumb-item"><a href="principal.php">Principal</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">Produtos</li>
-			  </ol>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="principal.php">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Produtos</li>
+				</ol>
 			</nav>
 		</div>
 	</div>
 	<div class="row">
-		<table class="table table-bordered table-striped table-hover">
+		<table class="table table-bordered table-striped table-hover table-warning">
+			<thead class="thead-dark">
 			<tr>
-				<th>#</th>
+				<th>&#9733;</th>
 				<th>Descrição</th>
 				<th>Preço</th>
 				<th>Estoque</th>

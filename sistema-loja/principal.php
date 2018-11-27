@@ -12,7 +12,7 @@
 			
 			<nav aria-label="breadcrumb">
 			  <ol class="breadcrumb">
-			    <li class="breadcrumb-item active" aria-current="page">Principal</li>
+			    <li class="breadcrumb-item active" aria-current="page">Home</li>
 			  </ol>
 			</nav>
 
@@ -22,7 +22,6 @@
 			    <li class="breadcrumb-item active" aria-current="page">Biblioteca</li>
 			  </ol>
 			</nav>
-
 			<nav aria-label="breadcrumb">
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -35,7 +34,7 @@
 	<div class="row">
 		<div class="col">
 			<div class="card" style="width: 18rem;">
-			  <img class="card-img-top" src="img/estoque.jpg" alt="Imagem de capa do card">
+			  <img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
 			  <div class="card-body">
 			    <h5 class="card-title">Título do card</h5>
 			    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
@@ -46,7 +45,7 @@
 
 		<div class="col">
 			<div class="card" style="width: 18rem;">
-			  <img class="card-img-top" src="img/estoque.jpg" alt="Imagem de capa do card">
+			  <img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
 			  <div class="card-body">
 			    <h5 class="card-title">Título do card</h5>
 			    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
@@ -56,7 +55,7 @@
 		</div>
 		<div class="col">
 			<div class="card" style="width: 18rem;">
-			  <img class="card-img-top" src="img/estoque.jpg" alt="Imagem de capa do card">
+			  <img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
 			  <div class="card-body">
 			    <h5 class="card-title">Título do card</h5>
 			    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
