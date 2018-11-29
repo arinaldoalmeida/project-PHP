@@ -8,20 +8,20 @@
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="principal.php">Home</a></li>
-					<li class="breadcrumb-item"aria-current><a href="Categoria.php">Categoria</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Clientes</li>
+					<li class="breadcrumb-item"aria-current><a href="Categoria.php">Categorias</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Categoria+</li>
 				</ol>
 			</nav>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col">
-			<form method="post" action="valvar-categoria.php">
+			<form method="post" action="salvar-categoria.php">
 				<div class="form-group">
-					<label for="descrição">Descrição:</label>
-					<input type="text" name="descrição" id="descrição" class="form-control" placeholder="Descrição" required>
+					<label for="descricao">Descrição:</label>
+					<input type="text" name="descricao" id="descricao" class="form-control" placeholder="Descrição" required>
 				</div>
-				<button class="btn btn-dark" type="submit">Salvar</button>
+				<button class="btn btn-success" type="submit">Salvar</button>
 			</form>
 		</div>
 	</div>

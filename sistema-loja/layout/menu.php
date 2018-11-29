@@ -11,7 +11,7 @@
         <a class="nav-link" href="produtos.php">| Produtos <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="usuario.php">| Clientes</a>
+        <a class="nav-link" href="usuario.php">| Usuário</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="categoria.php">| Categorias</a>
@@ -21,7 +21,7 @@
           | Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="cadastro.php">Cadastro</a>
+          <a class="dropdown-item" href="#">Cadastro</a>
           <a class="dropdown-item" href="#">Outra ação</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Algo mais aqui</a>

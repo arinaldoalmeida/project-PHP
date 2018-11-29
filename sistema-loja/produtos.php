@@ -27,6 +27,9 @@ $produtos = $conexao->query($sql_produtos);
 		</div>
 	</div>
 	<div class="row">
+		<a href="novo-produto.php" class="btn btn-warning mb-2 ">Novo produto</a>
+	</div>
+	<div class="row">
 		<table class="table table-bordered table-striped table-hover table-warning">
 			<thead class="thead-dark">
 			<tr>
