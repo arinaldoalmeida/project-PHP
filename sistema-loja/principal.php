@@ -11,56 +11,71 @@
 		<div class="col">
 			
 			<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb">
-			    <li class="breadcrumb-item active" aria-current="page">Home</li>
-			  </ol>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active" aria-current="page">Home</li>
+				</ol>
 			</nav>
+			<!-- Corrossel -->
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="../img/notebook.png" alt="First slide">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="../igm/mochila.jpg" alt="Second slide">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="../img/celular.jpg" alt="Third slide">
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
 
-			<!-- <nav aria-label="breadcrumb">
-			  <ol class="breadcrumb">
-			    <li class="breadcrumb-item"><a href="#">Home</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">Biblioteca</li>
-			  </ol>
-			</nav>
-			<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb">
-			    <li class="breadcrumb-item"><a href="#">Home</a></li>
-			    <li class="breadcrumb-item"><a href="#">Biblioteca</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">Dados</li>
-			  </ol>
-			</nav> -->
+			<!-- Corrossel -->
 		</div>
 	</div>
 	<div class="row">
 		<div class="col">
 			<div class="card" style="width: 18rem;">
-			  <img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
-			  <div class="card-body">
-			    <h5 class="card-title">Título do card</h5>
-			    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-			    <a href="#" class="btn btn-primary">Visitar</a>
-			  </div>
+				<img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
+				<div class="card-body">
+					<h5 class="card-title">Título do card</h5>
+					<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+					<a href="#" class="btn btn-primary">Visitar</a>
+				</div>
 			</div>
 		</div>
 
 		<div class="col">
 			<div class="card" style="width: 18rem;">
-			  <img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
-			  <div class="card-body">
-			    <h5 class="card-title">Título do card</h5>
-			    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-			    <a href="#" class="btn btn-primary">Visitar</a>
-			  </div>
+				<img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
+				<div class="card-body">
+					<h5 class="card-title">Título do card</h5>
+					<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+					<a href="#" class="btn btn-primary">Visitar</a>
+				</div>
 			</div>
 		</div>
 		<div class="col">
 			<div class="card" style="width: 18rem;">
-			  <img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
-			  <div class="card-body">
-			    <h5 class="card-title">Título do card</h5>
-			    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-			    <a href="#" class="btn btn-primary">Visitar</a>
-			  </div>
+				<img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
+				<div class="card-body">
+					<h5 class="card-title">Título do card</h5>
+					<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+					<a href="#" class="btn btn-primary">Visitar</a>
+				</div>
 			</div>
 		</div>
 

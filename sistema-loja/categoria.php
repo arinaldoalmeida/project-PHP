@@ -28,7 +28,7 @@ $categorias = $conexao->query($sql_categorias);
 			</div>
 			<?php } ?>
 			<div class="">
-				<a href="novacategoria.php" class="btn btn-dark mb-2">Categoria+</a>
+				<a href="novacategoria.php" class="btn btn-warning mb-2">Categoria+</a>
 			</div>
 			<p>&nbsp;</p>
 		<table class="table table-bordered table-striped table-hover table-warning">

@@ -41,18 +41,30 @@ $produtos = $conexao->query($sql_produtos);
 				<th>Ações</th>
 			</tr>
 
-			<?php while($produto = $produtos->fetch_array(MYSQLI_ASSOC)) { //aqui eu starto o loop dos dados da consulta ?>
+			<?php 
+			$total_estoque = 0;
+			while($produto = $produtos->fetch_array(MYSQLI_ASSOC)) { //aqui eu starto o loop dos dados da consulta ?>
 				<tr>
 					<td><?php echo $produto['id']; ?></td>
 					<td><?php echo $produto['nome']; ?></td>
 					<td>R$ <?php echo number_format($produto['valor'], 2, ',','.'); ?></td>
 					<td><?php echo $produto['estoque']; ?></td>
 					<td><?php echo $produto['categoria'] ?></td>
-					<td></td>
+					<td>
+						<a href="excluiproduto.php?id=<?php echo $produto['id'];?>"onclick="return confirm('Deseja exluir?')">
+						<i class="fas fa-trash-alt btn btn-danger"> </i> 
+						</a>
+					</td>
 				</tr>
 
-			<?php } //aqui finalizo o loop dos dados ?>
-
+			<?php 
+				$total_estoque += $produto['estoque'];
+				} //aqui finalizo o loop dos dados 
+			?>
+			<tr class="table-secondary">
+				<td colspan="3"><strong>Total geral em estoque</strong></td>
+				<td colspan="3"><strong><?php echo $total_estoque; ?></strong></td>
+			</tr>
 		</table>
 		
 		
