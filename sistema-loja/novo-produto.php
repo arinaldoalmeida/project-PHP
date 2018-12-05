@@ -2,6 +2,13 @@
  include "layout/menu.php";
 require "include/connection.php";
 
+	if(isset($_GET['id']) && $_GET['id'] != ''){
+		$id = $_GET['id'];
+		$sql_produto = "SELECT * FROM produto WHERE id = {$id}; ";
+		$produto = $conexao->query($sql_produto);
+		$dados_produto = $produto->fetch_array();
+	}
+
 	$sql_categorias = "SELECT * FROM categoria";
 	$categorias = $conexao->query($sql_categorias);
  ?>
@@ -31,15 +38,18 @@ require "include/connection.php";
 		<div class="form-row">
 			<div class="col-6">
 				<label for="nome" >Nome</label>
-				<input type="text" class="form-control" name="nome" id="nome" placeholder="nome" required>
+				<input type="text" class="form-control" name="nome" id="nome" placeholder="nome" required
+				value="<?php echo (isset($dados_produto) ? $dados_produto['nome'] : ''); ?>">
 			</div>
 			<div class="col-6">
 				<label for="valor" >Valor (R$):</label>
-				<input type="text" class="form-control price" name="valor" id="valor" required>
+				<input type="text" class="form-control price" name="valor" id="valor" required
+				value="<?php echo (isset($dados_produto) ? $dados_produto['valor'] : ''); ?>">
 			</div>
 			<div class="col-6">
 				<label for="estoque" >Estoque</label>
-				<input type="number" class="form-control" name="estoque" id="estoque" required>
+				<input type="number" class="form-control" name="estoque" id="estoque" required
+				value="<?php echo (isset($dados_produto) ? $dados_produto['estoque'] : ''); ?>">
 			</div>
 
 			<div class="col-6">
@@ -48,13 +58,15 @@ require "include/connection.php";
 				<select name="id_categoria" class="form-control" required>
 					<option value="">Escolha a categoria</option>
 					<?php while($mercadoria = $categorias->fetch_array(MYSQLI_ASSOC)) { ?>
-						<option value="<?php echo $mercadoria['id']; ?>"><?php echo $mercadoria['descricao']; ?></option>
+						<option value="<?php echo $mercadoria['id']; ?><?php echo (isset($dados_produto) ? $dados_produto['estoque'] : ''); ?>"><?php echo $mercadoria['descricao']; ?></option>
 					<?php } ?>
 
 				</select>
-			</div>	
+			</div>
+
 		</div>
 		<p>&nbsp;</p>
+		<button type="submit" class="btn btn-primary float-right">Salvar</button>
 	</div>
 
 <?php include "layout/footer.php"; ?>

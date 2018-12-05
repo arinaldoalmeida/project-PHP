@@ -27,6 +27,9 @@ $produtos = $conexao->query($sql_produtos);
 		</div>
 	</div>
 	<div class="row">
+		<?php 
+			require "include/isset.php";
+		 ?>
 		<a href="novo-produto.php" class="btn btn-warning mb-2 ">Novo produto</a>
 	</div>
 	<div class="row">
@@ -51,6 +54,9 @@ $produtos = $conexao->query($sql_produtos);
 					<td><?php echo $produto['estoque']; ?></td>
 					<td><?php echo $produto['categoria'] ?></td>
 					<td>
+						<a href="novo-produto.php?id=<?php echo $produto['id'];?>">
+						<i class="fas fa-edit btn btn-warning"> </i> 
+						</a>
 						<a href="excluiproduto.php?id=<?php echo $produto['id'];?>"onclick="return confirm('Deseja exluir?')">
 						<i class="fas fa-trash-alt btn btn-danger"> </i> 
 						</a>
