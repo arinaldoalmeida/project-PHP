@@ -1,27 +1,28 @@
 <?php include "layout/header.php";
- include "layout/menu.php";
+include "layout/menu.php";
 require "include/connection.php";
 
-	if(isset($_GET['id']) && $_GET['id'] != ''){
-		$id = $_GET['id'];
-		$sql_produto = "SELECT * FROM produto WHERE id = {$id}; ";
-		$produto = $conexao->query($sql_produto);
-		$dados_produto = $produto->fetch_array();
-	}
+$title = "Novo produto";
+if(isset($_GET['id']) && $_GET['id'] != ''){
+	$id = $_GET['id'];
+	$sql_produto = "SELECT * FROM produto WHERE id = {$id}; ";
+	$produto = $conexao->query($sql_produto);
+	$dados_produto = $produto->fetch_array();
+	$title = "Editar produto";
+}
 
-	$sql_categorias = "SELECT * FROM categoria";
-	$categorias = $conexao->query($sql_categorias);
- ?>
+$sql_categorias = "SELECT * FROM categoria";
+$categorias = $conexao->query($sql_categorias);
+?>
 
 <div class="container">
 	<p>&nbsp;</p>
-	<h1>Novo produto</h1>
+	<h1><?php echo $title ?></h1>
 
-	<?php if(isset($_GET['msg']) && isset($_GET['tipo_msg'])) { ?>
-		<div class="alert alert-<?php echo $_GET['tipo_msg']; ?>">
-			<?php echo $_GET['msg']; ?>
-		</div>
-	<?php } ?>
+	<?php 
+	require "include/isset.php";
+
+	?>
 
 	<div class="row">
 		<div class="col">
@@ -29,7 +30,7 @@ require "include/connection.php";
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="principal.php">Home</a></li>
 					<li class="breadcrumb-item"aria-current><a href="produtos.php">Produtos</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Novo produto</li>
+					<li class="breadcrumb-item active" aria-current="page"><?php echo $title ?></li>
 				</ol>
 			</nav>
 		</div>
@@ -40,6 +41,7 @@ require "include/connection.php";
 				<label for="nome" >Nome</label>
 				<input type="text" class="form-control" name="nome" id="nome" placeholder="nome" required
 				value="<?php echo (isset($dados_produto) ? $dados_produto['nome'] : ''); ?>">
+				<input type="hidden" name="id" value="<?php echo (isset($dados_produto) ? $dados_produto['id'] : ''); ?>">
 			</div>
 			<div class="col-6">
 				<label for="valor" >Valor (R$):</label>
@@ -58,7 +60,15 @@ require "include/connection.php";
 				<select name="id_categoria" class="form-control" required>
 					<option value="">Escolha a categoria</option>
 					<?php while($mercadoria = $categorias->fetch_array(MYSQLI_ASSOC)) { ?>
-						<option value="<?php echo $mercadoria['id']; ?><?php echo (isset($dados_produto) ? $dados_produto['estoque'] : ''); ?>"><?php echo $mercadoria['descricao']; ?></option>
+						<option value="<?php echo $mercadoria['id']; ?>"
+							<?php 
+							if(isset($dados_produto) && $dados_produto['id_categoria'] ==
+								$mercadoria['id']){ echo 'selected = "selected"';}
+							?>
+							>
+							<?php echo $mercadoria['descricao']; ?>
+							
+						</option>
 					<?php } ?>
 
 				</select>
@@ -69,4 +79,4 @@ require "include/connection.php";
 		<button type="submit" class="btn btn-primary float-right">Salvar</button>
 	</div>
 
-<?php include "layout/footer.php"; ?>
+	<?php include "layout/footer.php"; ?>

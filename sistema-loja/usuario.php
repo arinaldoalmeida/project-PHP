@@ -23,29 +23,38 @@ $usuarios = $conexao->query($sql_usuarios);
 		</div>
 	</div>
 	<div class="row">
-		<a href="cadastro.php" class="btn btn-warning mb-2">Novo usuário</a>
+		<a href="novo-usuario.php" class="btn btn-warning mb-2">Novo usuário</a>
 		<table class="table table-bordered table-striped table-hover table-warning">
 			<thead class="thead-dark">
-			<tr>
-				<th>&#9733;</th>
-				<th>Nome</th>
-				<th>Email</th>
-			</tr>
-			<?php while($usuario = $usuarios->fetch_array(MYSQLI_ASSOC)) { ?>
 				<tr>
-					<td><?php echo $usuario["id"]; ?></td>
-					<td><?php echo $usuario["nome"]; ?></td>
-					<td><?php echo $usuario["email"];?></td>
+					<th>&#9733;</th>
+					<th>Nome</th>
+					<th>Email</th>
+					<th>Ações</th>
 				</tr>
+				<?php while($usuario = $usuarios->fetch_array(MYSQLI_ASSOC)) { ?>
+					<tr>
+						<td><?php echo $usuario["id"]; ?></td>
+						<td><?php echo $usuario["nome"]; ?></td>
+						<td><?php echo $usuario["email"];?></td>
+						<td>
+							<a href="altera-usuario.php?id=<?php echo $usuario['id']; ?>">
+								<i class="fas fa-edit btn btn-warning"></i>
+							</a>
+							<a href="deleteuser.php?id=<?php echo $usuario['id']; ?>" onclick= "return confirm('Deletar?')">
+								<i class="fas fa-trash-alt btn btn-danger"></i>
+							</a>
+						</td>
+					</tr>
 
-			<?php } ?>
+				<?php } ?>
 
-		</table>
-		
-		
+			</table>
+
+
+
+		</div>
 
 	</div>
 
-</div>
-
-<?php include "layout/footer.php"; ?>
+	<?php include "layout/footer.php"; ?>
