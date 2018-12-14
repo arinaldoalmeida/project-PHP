@@ -15,7 +15,6 @@ $produtos = $conexao->query($sql_produtos);
 <?php include "layout/menu.php"; ?>
 <div class="container">
 	<p>&nbsp;</p>
-	<h1>Produtos</h1>
 	<div class="row">
 		<div class="col">
 			<nav aria-label="breadcrumb">

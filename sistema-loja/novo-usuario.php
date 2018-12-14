@@ -2,58 +2,61 @@
 include "layout/header.php";
 include "layout/menu.php";
 require "include/connection.php";
-
-isset($_GET['id']) && $_GET['id'] != '')
+$title = "Novo usuário";
+if(isset($_GET['id']) && $_GET['id'] != '') {
 	$id = $_GET['id'];
-	$sql_usuario = "SELECT * FROM produto WHERE id = {$id}; ";
-	$produto = $conexao->query($sql_usuario);
-	$dados_usuario = $usuario->fetch_array();
-
+	$sql_usuario = "SELECT * FROM usuario WHERE id = {$id}";
+	$dados_usuario = $conexao->query($sql_usuario)->fetch_assoc();
+	$title = "Editar usuário";
+}
 ?>
+
+
 <div class="container">
 	<p>&nbsp;</p>
-	<h1>Novo usuário</h1>
-
-	<?php 
-	require "include/isset.php";
-
-	?>
-
+	<h1><?php echo $title; ?></h1>
 	<div class="row">
 		<div class="col">
 			<nav aria-label="breadcrumb">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="principal.php">Home</a></li>
-					<li class="breadcrumb-item"aria-current><a href="usuario.php">Usuário</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Novo usuário</li>
-				</ol>
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><a href="principal.php">Principal</a></li>
+			    <li class="breadcrumb-item"><a href="usuarios.php">Usuários</a></li>
+			    <li class="breadcrumb-item active" aria-current="page"><?php echo $title; ?></li>
+			  </ol>
 			</nav>
 		</div>
 	</div>
-	<form method="post" action="cadastro.php">
-		<div class="form-row">
-			<div class="col-6">
-				<label for="nome" >Nome</label>
-				<input class="form-control" type="text" name="nome" id="nome" placeholder="Nome" required>
-			</div>
-			<div class="col-6">
-				<label for="email" >E-mail</label>
-				<input class="form-control" type="email" name="email" id="email" placeholder="E-mail" required>
-			</div>
-			<div class="col-6">
-				<label for="senha" >Senha</label>
-				<input class="form-control" type="text" name="senha" id="senha" placeholder="Senha" required>
-			</div>
-			<!-- <div class="col-6">
-				<label for="senha" >Confirmar senha</label>
-				<input class="form-control" type="text" name="senha" id="senha" placeholder="Confirmar senha" required>
-			</div> -->
 
-		</div>
-		<p>&nbsp;</p>
-		<button type="submit" class="btn btn-primary float-right">Cadastrar</button>
+	<div class="row">
+		<div class="col-3"></div>		
+		<div class="col-6">
+			
+			<form method="post" action="salvausuario.php">
+				<div class="form-group">
+					<label for="nome">Nome:</label>
+					<input type="text" name="nome" id="nome" class="form-control" required  value="<?php echo(isset($dados_usuario) ? $dados_usuario['nome'] : ''); ?>">
+					<input type="hidden" name="id" value="<?php echo(isset($dados_usuario) ? $dados_usuario['id'] : ''); ?>">
+				</div>
+				<div class="form-group">
+					<label for="email">E-mail:</label>
+					<input type="email" name="email" id="email" class="form-control" required  
+					value="<?php echo(isset($dados_usuario) ? $dados_usuario['email'] : ''); ?>">
+				</div>
+				<div class="form-group">
+					<label for="senha">Senha:</label>
+					<input type="password" name="senha" id="senha" class="form-control"
+					 <?php echo(isset($dados_usuario) ? '' : 'required') ?> >
+				</div>
+				<button class="btn btn-primary float-right" type="submit">Salvar</button>
+			</form>
+
+
+		</div>		
+		<div class="col-3"></div>		
 		
-	</form>
-</div>
+	</div>
 
-<?php include "layout/footer.php"; ?>
+</div>
+<?php 
+include "layout/footer.php";
+?>

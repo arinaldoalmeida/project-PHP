@@ -6,7 +6,6 @@
 
 <div class="container">
 	<p>&nbsp;</p>
-	<h1>Página principal</h1>
 	<div class="row">
 		<div class="col">
 			
@@ -21,16 +20,24 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-292" src="img/mochila.jpg" alt="First slide">
+      <img class="d-block w-292" src="img/merry.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-292" src="img/notebook.png" alt="Second slide">
+      <img class="d-block w-292" src="img/relogios.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-292" src="img/celular.jpg" alt="Third slide">
+      <img class="d-block w-292" src="img/bik.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-292" src="img/not.png" alt="Third slide">
+    </div>
+     <div class="carousel-item">
+      <img class="d-block w-292" src="img/merry2.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -49,33 +56,33 @@
 	</div>
 	<div class="row">
 		<div class="col">
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
+			<div class="card ext-white bg-warning mb-3" style="width: 20rem;">
+				<img class="card-img-top" src="img/produto1.jpg" alt="Imagem de capa do card">
 				<div class="card-body">
-					<h5 class="card-title">Título do card</h5>
-					<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-					<a href="#" class="btn btn-primary">Visitar</a>
+					<h5 class="card-title">Notebook Ideapad 320</h5>
+					<p class="card-text">Intel Core i3 4GB 1TB Full HD 15.6'' Prata Windows 10 com Dolby Áudio, entrada USB tipo C, WiFi AC ultrarrápido</p>
+					<a href="#" class="btn btn-dark">Visitar</a>
 				</div>
 			</div>
 		</div>
 
-		<div class="col">
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
+			<div class="col">
+			<div class="card ext-white bg-warning mb-3" style="width: 20rem;">
+				<img class="card-img-top" src="img/note9.jpg" alt="Imagem de capa do card">
 				<div class="card-body">
-					<h5 class="card-title">Título do card</h5>
-					<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-					<a href="#" class="btn btn-primary">Visitar</a>
+					<h5 class="card-title">Smartphone Samsung Galaxy Note 9 </h5>
+					<p class="card-text">128GB Nano Chip Tela 6.4" Octa-Core 2.8GHz 4G Câmera Dupla 12 MP 6GB RAM,Caneta S Pen</p>
+					<a href="#" class="btn btn-dark">Visitar</a>
 				</div>
 			</div>
 		</div>
-		<div class="col">
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://raw.githubusercontent.com/arinaldoalmeida/project-PHP/master/sistema-loja/img/estoque.jpg" alt="Imagem de capa do card">
+			<div class="col">
+			<div class="card ext-white bg-warning mb-3" style="width: 20rem;">
+				<img class="card-img-top" src="img/ops.jpg" alt="Imagem de capa do card">
 				<div class="card-body">
-					<h5 class="card-title">Título do card</h5>
-					<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-					<a href="#" class="btn btn-primary">Visitar</a>
+					<h5 class="card-title">	Call Of Duty: Black Ops 4 - XBOX ONE</h5>
+					<p class="card-text">No Blackout, o Black Ops ganha vida em uma experiência massiva de batalha real</p>
+					<a href="#" class="btn btn-dark">Visitar</a>
 				</div>
 			</div>
 		</div>

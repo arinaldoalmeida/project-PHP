@@ -10,7 +10,6 @@ $categorias = $conexao->query($sql_categorias);
 <?php include "layout/menu.php"; ?>
 <div class="container">
 	<p>&nbsp;</p>
-	<h1>Categorias</h1>
 	<div class="row">
 		<div class="col">
 			<nav aria-label="breadcrumb">
@@ -33,6 +32,7 @@ $categorias = $conexao->query($sql_categorias);
 			<thead class="thead-dark">
 			<tr>
 				<th>&#9733;</th>
+				<th>Categoria</th>
 				<th>Tipo</th>
 				<th>Ações</th>
 			</tr>
@@ -40,6 +40,7 @@ $categorias = $conexao->query($sql_categorias);
 				<tr>
 					<td><?php echo $categoria["id"]; ?></td>
 					<td><?php echo $categoria["descricao"]; ?></td>
+					<td><?php echo $categoria["tipo"]; ?></td>
 					<td>
 						<a href="editar-categoria.php?id=<?php echo $categoria['id']; ?>">
 							<i class="fas fa-edit btn btn-warning"></i>

@@ -21,10 +21,10 @@
           | Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Cadastro</a>
-          <a class="dropdown-item" href="#">Outra ação</a>
+          <a class="dropdown-item" href="funcionario.php">Funcionários</a>
+          <a class="dropdown-item" href="salvapessoa.php">Cadastro</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Algo mais aqui</a>
+          <a class="dropdown-item" href="teste.php">Algo mais aqui</a>
         </div>
       </li>
       

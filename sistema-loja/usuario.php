@@ -11,7 +11,6 @@ $usuarios = $conexao->query($sql_usuarios);
 <?php include "layout/menu.php"; ?>
 <div class="container">
 	<p>&nbsp;</p>
-	<h1>Usuário</h1>
 	<div class="row">
 		<div class="col">
 			<nav aria-label="breadcrumb">
@@ -23,6 +22,9 @@ $usuarios = $conexao->query($sql_usuarios);
 		</div>
 	</div>
 	<div class="row">
+		<?php 
+		require "include/isset.php";
+		 ?>
 		<a href="novo-usuario.php" class="btn btn-warning mb-2">Novo usuário</a>
 		<table class="table table-bordered table-striped table-hover table-warning">
 			<thead class="thead-dark">

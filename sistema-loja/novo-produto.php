@@ -40,6 +40,7 @@ $categorias = $conexao->query($sql_categorias);
 			<div class="col-6">
 				<label for="nome" >Nome</label>
 				<input type="text" class="form-control" name="nome" id="nome" placeholder="nome" required
+					
 				value="<?php echo (isset($dados_produto) ? $dados_produto['nome'] : ''); ?>">
 				<input type="hidden" name="id" value="<?php echo (isset($dados_produto) ? $dados_produto['id'] : ''); ?>">
 			</div>
